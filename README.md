@@ -14,10 +14,7 @@
 * a user registered at getbase.com with the trial period expired (included)
 
 **Dependencies:**
-* Run the following command from the local project repository root folder to install dependencies:
-```
-pip install -r prerequisites.txt
-```
+* Run the following command from the local project repository root folder to install dependencies: ``` pip install -r prerequisites.txt ```
 
 **Ways to run it:** 
 * Manually:
@@ -26,10 +23,7 @@ pip install -r prerequisites.txt
 * CI:
   - create a free style job - an event which will fire it up is of your choice - manually, SI commit, schedule, etc.
   - choose add execute Windows batch command as a build step
-  - specify: 
-  ```
-  <path to python>\python.exe <path to local repository>\base_plan_total_tests2.py 
-  ```
+  - specify: ``` <path to python>\python.exe <path to local repository>\base_plan_total_tests2.py ```
   Note: please replace <...path...> with your actual paths
 
 **Disclaimer:** This is rather an educational sample than a real life example, not a complete suite neither. Its purpose it to illustrate how Selenium+Python 
