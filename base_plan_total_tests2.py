@@ -1,5 +1,5 @@
 ##########################################################################################
-#Background: getbase.com provides different plan types and time periods combinations to choose from, depending on that total sum will be calculated.
+#Background: getbase.com provides different plan types and time periods combinations to choose from, depending on that the total sum will be calculated.
 
 #This is a test suite to check that the total sum is calculated correctly for different plan type & time period combinations.
 
@@ -18,10 +18,10 @@ from selenium.webdriver.support import expected_conditions as EC
 import unittest
 
 #test suite specific modules
-import const
-import PricingHomePage
-import LoginPage
-import PlanTypeSelectionPage
+import const #those are constants like plan type & name used by more then one module
+import PricingHomePage # this is the Page Object for the very first page (getbase.com/prising)
+import LoginPage # the Page Object for the next one with the login form
+import PlanTypeSelectionPage # the Page Object for the plan type selection page
 
 class WebDriverTestCase(unittest.TestCase):
 
