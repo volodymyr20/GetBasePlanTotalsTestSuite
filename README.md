@@ -1,6 +1,6 @@
 **Background**: getbase.com provides different plan types and time periods combinations to choose from, depending on that the total sum will be calculated.
 
-This is a test suite to check that the total sum is calculated correctly for different plan type & time period combinations - the main file is base_plan_total_tests2.py.
+**This is a test suite** to check that the total sum is calculated correctly for different plan type & time period combinations - the main file is base_plan_total_tests2.py.
 
 **Pre-requisites - software:**
 * Windows 7
