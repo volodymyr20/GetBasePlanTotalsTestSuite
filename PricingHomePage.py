@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Base_Page_Object2 import Page
+
+from Base_Page_Object2 import Page #generic Page Object
  
 class PricingHomePage(Page):
     #local constants
