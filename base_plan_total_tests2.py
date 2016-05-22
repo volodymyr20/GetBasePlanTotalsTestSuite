@@ -1,20 +1,6 @@
-##########################################################################################
-#Background: getbase.com provides different plan types and time periods combinations to choose from, depending on that the total sum will be calculated.
-
-#This is a test suite to check that the total sum is calculated correctly for different plan type & time period combinations.
-
-#Pre-requisites:
-#1) a user registered at getbase.com with the trial period expired
-
-#Disclaimer: This is rather an educational sample than a real life example, not a complete suite neither. Its purpose it to illustrate how Selenium+Python 
-#can be used for test automation of web sites, and also use of Page Object design pattern which makes maintenance a lot easier. 
-
-##########################################################################################
+#This is the main test suite, please refer to README.md for more details
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import unittest
 
 #test suite specific modules
@@ -41,7 +27,7 @@ class MyTests(WebDriverTestCase):
   
     STARTER_MONTHLY_TOTAL_SUM="25"
     #...
-	#the rest of totals should be added for other test cases
+    #the rest of totals should be added for other test cases
   
     # pre-requisites for all test cases: 1) open pricing home page 2) log in
     pricing_home_page = PricingHomePage.PricingHomePage(self.driver)
@@ -63,10 +49,10 @@ class MyTests(WebDriverTestCase):
     #test case post action: go back to the plan type selection form
     self.driver.back();
     self.driver.forward();
-	
-	#test case #2: checking Starter + Annually combination total sum, the same pattern as above, just different values
-	#...
-	#test case #9: checking Enterprise + Every Two Years combination total sum   
+    
+    #test case #2: checking Starter + Annually combination total sum, the same pattern as above, just different values
+    #...
+    #test case #9: checking Enterprise + Every Two Years combination total sum   
 
 if __name__ == '__main__':
     unittest.main()
