@@ -1,2 +1,8 @@
+#Plan type and time period constants
 STARTER_PLAN_TYPE='Starter 2014'
+PROFFESIONAL_PLAN_TYPE='Proffesional 2014'
+ENTERPRISE_PLAN_TYPE='Enterprise 2014'
+
 MONTHLY_PLAN_TIME_PERIOD='Monthly'
+ANNUALY_PLAN_TIME_PERIOD='Annualy'
+EVERY_TWO_YEARS_PLAN_TIME_PERIOD='Every Two Years'
