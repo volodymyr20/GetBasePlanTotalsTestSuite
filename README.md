@@ -20,6 +20,8 @@
 * Manually:
   - either double click the main test suite file in Windows explorer
   - or go to the path where the project repository is cloned locally and type its name
+  Note 1: cookies have to be cleaned up after each run
+  Note 2: the browser crashes afterwards, which has nothing to do with the scripts, it's on the browser side and seems to be a known issue
 * CI:
   - create a free style job - an event which will fire it up is of your choice - manually, SI commit, schedule, etc.
   - choose add execute Windows batch command as a build step
