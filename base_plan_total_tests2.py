@@ -3,6 +3,11 @@
 from selenium import webdriver
 import unittest
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
 #test suite specific modules
 import const #those are constants like plan type & name used by more then one module
 import PricingHomePage # this is the Page Object for the very first page (getbase.com/prising)
@@ -41,7 +46,14 @@ class MyTests(WebDriverTestCase):
     
     #test case #1: checking Starter + Monthly combination total sum
     plan_type_selection_page = PlanTypeSelectionPage.PlanTypeSelectionPage(self.driver)
-    self.assertIn(PLAN_SELECTION_PAGE_TITLE, plan_type_selection_page.get_Title())
+     
+    try:
+        element = WebDriverWait(self.driver, 10).until(
+        EC.title_is(PLAN_SELECTION_PAGE_TITLE)
+    )
+    finally:
+        pass
+    
     plan_type_selection_page.ChoosePlanType(const.STARTER_PLAN_TYPE) 
     plan_type_selection_page.ChoosePlanTimePeriod(const.MONTHLY_PLAN_TIME_PERIOD) 
     self.assertIn(STARTER_MONTHLY_TOTAL_SUM, plan_type_selection_page.TotalSum())
